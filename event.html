@@ -2,7 +2,7 @@
  Auto Format Document: ALT + SHIFT + F
 -->
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -51,7 +51,128 @@
     </header>
 
     <main>
-        Main content goes here.
+        <h1 class="display-1">Rekode Course Calander</h1>
+
+
+        <table class="table table-primary table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Dates</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Instructor</th>
+                    <th scope="col">Ticket Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mar 13-15</td>
+                    <td>Sales Presentations</td>
+                    <td>Sam Hobkins</td>
+                    <td>$79.99</td>
+                </tr>
+                <tr>
+                    <td> Mar 19-21</td>
+                    <td>Protect Your Customers</td>
+                    <td>Danielle Perkins</td>
+                    <td>$79.99</td>
+                </tr>
+                <tr>
+                    <td>Apr 8-11</td>
+                    <td>Intro to Prospecting</td>
+                    <td>Rubio Stein</td>
+                    <td>$99.99</td>
+                </tr>
+                <tr>
+                    <td>Apr 15-18</td>
+                    <td>Building Customer Network</td>
+                    <td>Clyde Simpson</td>
+                    <td>$79.99</td>
+                </tr>
+                <tr>
+                    <td>Apr 21-23</td>
+                    <td>Intro to Cloud Basics</td>
+                    <td>Tony Parelli</td>
+                    <td>$79.99</td>
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+
+        <!-- Event Registration Form Section -->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-4 text-center">Event Registration</h2>
+                    <form>
+                        <!-- Name Row -->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+        
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+        
+                        <!-- Phone Number -->
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+1 (555) 123-4567" required>
+                        </div>
+        
+                        <!-- Referral Source Radio Buttons -->
+                        <div class="mb-3">
+                            <label class="form-label">How did you hear about us?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="referralSource" id="socialMedia">
+                                <label class="form-check-label" for="socialMedia">
+                                    Social Media
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="referralSource" id="friend">
+                                <label class="form-check-label" for="friend">
+                                    Friend/Colleague
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="referralSource" id="searchEngine">
+                                <label class="form-check-label" for="searchEngine">
+                                    Search Engine
+                                </label>
+                            </div>
+                        </div>
+        
+                        <!-- Class Selection Dropdown -->
+                        <div class="mb-4">
+                            <label for="classSelection" class="form-label">Select Class</label>
+                            <select class="form-select" id="classSelection" required>
+                                <option value="">Choose a class...</option>
+                                <option value="beginner">Sales Presentations</option>
+                                <option value="intermediate">Protect Your Customers</option>
+                                <option value="advanced">Intro to Prospecting</option>
+                                <option value="professional">Build Customer Network</option>
+                                <option value="professional">Intro to Cloud Basics</option>
+                            </select>
+                        </div>
+        
+                        <!-- Submit Button -->
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Register Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>

@@ -1,7 +1,11 @@
 body {
-    font-family: monospace;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
 }
 
 nav {
@@ -10,8 +14,53 @@ nav {
 
 nav a:hover {
     text-transform: uppercase;
-    background: green;
+    background: rgb(145, 177, 189);
 }
+
+.thead
+.tbody {
+    width: 70%;
+}
+
+.card {
+    display: flex;
+    text-align: center;
+}
+
+.team-section {
+    background-color: var(--light-color);
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-img-wrapper img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.social-links i {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover i {
+    color: var(--primary-color);
+}
+
+
 
 footer {
     position: fixed;

@@ -51,22 +51,131 @@
     </header>
 
     <main>
-        <form class="contact-form my-5 py-4">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+        <main class="contact-section">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-center mb-5">Contact Us</h2>
+                        <div class="row g-4">
+                            <!-- Contact Form -->
+                            <div class="col-md-7">
+                                <form class="needs-validation" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your first name.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your last name.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="name@example.com" required>
+                                            <div class="invalid-feedback">
+                                                Please enter a valid email address.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone"
+                                                placeholder="+1 (555) 123-4567">
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="subject" class="form-label">Subject</label>
+                                            <select class="form-select" id="subject" required>
+                                                <option value="">Choose a subject</option>
+                                                <option>General Inquiry</option>
+                                                <option>Technical Support</option>
+                                                <option>Partnership Opportunities</option>
+                                                <option>Careers</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a subject.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                                            <div class="invalid-feedback">
+                                                Please enter your message.
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                                <label class="form-check-label" for="newsletter">
+                                                    Subscribe to our newsletter
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button class="btn btn-primary btn-lg w-100" type="submit">Send
+                                                Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="col-md-5">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4">Get in Touch</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-4">
+                                                <i class="fas fa-map-marker-alt me-3 text-primary"></i>
+                                                123 Tech Boulevard<br>
+                                                Silicon Valley, CA 94025
+                                            </li>
+                                            <li class="mb-4">
+                                                <i class="fas fa-phone me-3 text-primary"></i>
+                                                +1 (555) 123-4567
+                                            </li>
+                                            <li class="mb-4">
+                                                <i class="fas fa-envelope me-3 text-primary"></i>
+                                                contact@rekode.com
+                                            </li>
+                                            <li class="mb-4">
+                                                <i class="fas fa-clock me-3 text-primary"></i>
+                                                Mon-Fri: 9:00 AM - 5:00 PM
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <div class="social-links">
+                                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-outline-primary btn-sm me-2">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#" class="btn btn-outline-primary btn-sm">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </main>
+
     </main>
 
     <footer>
