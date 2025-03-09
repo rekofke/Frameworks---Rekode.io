@@ -17,6 +17,7 @@ const featuresList = {
     { idea: 1, text: "Create dark mode", done: false },
     { idea: 2, text: "Add Carousoul or accordian", done: false },
     { idea: 3, text: "Add avatars for 'meet the team'", done: true },
+    { idea: 4, text: "Add interactive portfolio page", done: false },
     
 };
 
