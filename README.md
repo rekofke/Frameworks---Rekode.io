@@ -6,28 +6,75 @@ I elected to create a model for my personal company website "Rekode Advanced Dev
 I used BootStrap to simplify the design process by implementing cards, forms and table forms
 
 JavaScript Functions:
+// 1. Random design ideas:
 
-1. function getRandomIdea() {
-    return designIdeas[Math, floor(Math.random() * designIdeas.length)];
+const designIdeas = {
+    "Consistency creates trust",
+    "Contrast is key",
+    "White space is necessary",
+    "Mobile first"
+};
 
-   This function could be potentially used to generate random design ideas
+function getRandomIdea() {
+    return designIdeas[Math.floor(Math.random() * designIdeas.length)];
+}
 
-3. function toggleFeature(idea) {
-    const feature = teaturesList.find(item => item.idea === idea);
+// 2. Interactive checklist:
+
+const featuresList = [
+    { id: 1, text: "Create dark mode", done: false },
+    { id: 2, text: "Add Carousel or accordion", done: false },
+    { id: 3, text: "Add avatars for 'meet the team'", done: true },
+    { id: 4, text: "Add interactive portfolio page", done: false }
+];
+
+function toggleFeature(id) {
+    const feature = featuresList.find(item => item.id === id);
     if (feature) feature.done = !feature.done;
     return featuresList;
+}
 
-   This is an interactive to-do/checklist that I can use to help keep track of changes and features I would like to use
+// 3. Progress calculator
 
-4. function showProgress(current, total) {
+function showProgress(current, total) {
     const percentage = (current / total * 100).toFixed(1);
     return `Progress: ${current}/${total} (${percentage}%)`;
+}
 
-   This was a random idea and not sure exactly how functional it would be in practice but the idea is to
-   track my completion progress
+console.log(showProgress(3, 10)); // Output: Progress: 30.0%
 
-5. function cycleFeature() {
-   currentFeature = (currentFeature + 1) % features length;
-   document.getElementById('feature-display').textContent = features[currentFeature];
-   
-   This function could be used to create a rotating carosusel of main company features to display on the page
+
+// 4. Enhance form input
+
+function formatUsername(input) {
+    return input.trim().toLowerCase().replace(/\s+/g, '-');
+}
+
+const userInput = " Code Master ";
+console.log(formatUsername(userInput));
+
+// 5. Greeting generator
+
+const greetings = ["Welcome back", "So glad you returned", "Great to see you", "Hello!"];
+const username = "CodeMaster";
+
+function showGreeting() {
+    const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+    return `${randomGreeting}, ${username}! Let's make something great!`;
+}
+
+// 6. Carousel of company features
+
+const features = [
+    "Full stack design",
+    "Cloud solutions",
+    "Mobile app design",
+    "On-site classes"
+];
+
+let currentFeature = 0;
+
+function cycleFeature() {
+    currentFeature = (currentFeature + 1) % features.length;
+    document.getElementById('feature-display').textContent = features[currentFeature];
+}
