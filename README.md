@@ -6,6 +6,7 @@ I elected to create a model for my personal company website "Rekode Advanced Dev
 I used BootStrap to simplify the design process by implementing cards, forms and table forms
 
 JavaScript Functions:
+
 // 1. Random design ideas:
 
 const designIdeas = {
