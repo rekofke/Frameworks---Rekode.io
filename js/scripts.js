@@ -8,21 +8,20 @@ const designIdeas = {
 };
 
 function getRandomIdea() {
-    return designIdeas[Math, floor(Math.random() * designIdeas.length)];
+    return designIdeas[Math.floor(Math.random() * designIdeas.length)];
 }
 
 // 2. Interactive checklist:
 
-const featuresList = {
-    { idea: 1, text: "Create dark mode", done: false },
-    { idea: 2, text: "Add Carousoul or accordian", done: false },
-    { idea: 3, text: "Add avatars for 'meet the team'", done: true },
-    { idea: 4, text: "Add interactive portfolio page", done: false },
-    
-};
+const featuresList = [
+    { id: 1, text: "Create dark mode", done: false },
+    { id: 2, text: "Add Carousel or accordion", done: false },
+    { id: 3, text: "Add avatars for 'meet the team'", done: true },
+    { id: 4, text: "Add interactive portfolio page", done: false }
+];
 
-function toggleFeature(idea) {
-    const feature = teaturesList.find(item => item.idea === idea);
+function toggleFeature(id) {
+    const feature = featuresList.find(item => item.id === id);
     if (feature) feature.done = !feature.done;
     return featuresList;
 }
@@ -34,7 +33,7 @@ function showProgress(current, total) {
     return `Progress: ${current}/${total} (${percentage}%)`;
 }
 
-console.log(showProgress(3, 10)); //<--- 30.0%
+console.log(showProgress(3, 10)); // Output: Progress: 30.0%
 
 
 // 4. Enhance form input
@@ -49,25 +48,25 @@ console.log(formatUsername(userInput));
 // 5. Greeting generator
 
 const greetings = ["Welcome back", "So glad you returned", "Great to see you", "Hello!"];
-const username = "CodeMaster"
+const username = "CodeMaster";
 
 function showGreeting() {
     const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
-    return `${randomGreeting}, ${username}! Lets make something great!`;
+    return `${randomGreeting}, ${username}! Let's make something great!`;
 }
 
 // 6. Carousel of company features
 
-const features = {
+const features = [
     "Full stack design",
     "Cloud solutions",
     "Mobile app design",
     "On-site classes"
-};
+];
 
 let currentFeature = 0;
 
 function cycleFeature() {
-    currentFeature = (currentFeature + 1) % features length;
+    currentFeature = (currentFeature + 1) % features.length;
     document.getElementById('feature-display').textContent = features[currentFeature];
 }
